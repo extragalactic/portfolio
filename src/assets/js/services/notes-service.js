@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app.services').factory('NoteService', function($http) {
+angular.module('app').factory('NoteService', function($http) {
   return {
     all: function() {
         return $http({

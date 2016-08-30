@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import jshint   from 'gulp-jshint';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -26,7 +27,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy, copyViews, copyHtmlRoot, copyLibraries), styleGuide));
+ gulp.series(jshint_verify, clean, javascript, gulp.parallel(pages, sass, images, copy, copyViews, copyHtmlRoot, copyLibraries), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -105,6 +106,14 @@ function sass() {
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
+}
+
+// check javascript for syntax errors
+function jshint_verify() {
+  return gulp.src('src/assets/js/*')
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish-ex'))
+    .pipe(jshint.reporter('fail'));
 }
 
 // Combine JavaScript into one file

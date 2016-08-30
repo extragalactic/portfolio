@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app.controllers').controller('NotesCtrl', function($scope, $state, NoteService) {
+angular.module('app').controller('NotesCtrl', function($scope, $state, NoteService) {
 	/*
     $scope.loaded = false;
     NoteService.all().success(function(response){
