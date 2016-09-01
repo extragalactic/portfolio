@@ -9,24 +9,21 @@ angular.module('app', ['ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-    .state('about', {
-        url: '/about',
-        templateUrl: 'views/about.html',
-        controller: 'RootCtrl'
-    })
-
-    .state('notes', {
-        url: '/notes',
-        templateUrl: 'views/notes.html',
-        controller: 'NotesCtrl'
-    })
 
     .state('main', {
         url: '/main',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+    })
+
+    .state('project', {
+        url: '/project/:projectId',
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl'
     });
 
     $urlRouterProvider.otherwise('main');
-
+})
+.value('appVars', {
+    projectData: []
 });

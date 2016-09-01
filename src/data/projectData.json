@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "id":"galaxylist",
+      "name":"Galaxy Browser",
+      "imageURL":"project-galaxy-browser.jpg",
+      "thumbURL":"thumb-galaxy-browser.jpg",
+      "technologies": ["Javascript", "NodeJS", "MongoDB", "Angular", "Bootstrap", "Sass/CSS", "Gulp", "Amazon EC2"],
+      "tools": [],
+      "description":"This website is an astronomy database of nearby galaxies, created as a complimentary component of my larger Multiverse project. The site runs MongoDB on an Amazon EC2 server."
+    },
+    {
+      "id":"vjcontroller",
+      "name":"iPad Controller",
+      "imageURL":"project-vjcontroller.jpg",
+      "thumbURL":"thumb-vjcontroller.jpg",
+      "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "jQuery", "Sass/CSS", "Gulp", "NexusUI"],
+      "tools": [],
+      "description":"This is a touch-screen controller for use on an iPad, using the NexusUI Javascript library and the OSC protocol. It features a step sequencer and adjustable presets to communicate with visual performance software."
+    },
+    {
+      "id":"sketcher",
+      "name":"Sketcher",
+      "imageURL":"assets/img/project-.jpg",
+      "thumbURL":"assets/img/thumb-.jpg",
+      "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "HTML5 Canvas", "Gulp"],
+      "tools": [],
+      "description":"This is a multi-user sketch program that was developed as a prototype for a local graffiti art festival. It uses NodeJS and the HTML5 Canvas object to let multiple users draw on the screen."
+    },
+    {
+      "id":"portfolio",
+      "name":"Online Portfolio",
+      "imageURL":"assets/img/project-.jpg",
+      "thumbURL":"assets/img/thumb-.jpg",
+      "technologies": ["Javascript", "Foundation", "Angular", "Sass/CSS", "Gulp", "Bower"],
+      "tools": [],
+      "description":"This website uses the Foundation framework and local JSON objects to store data."
+    },
+    {
+      "id":"gostickman",
+      "name":"GoStickman Studios",
+      "imageURL":"project-gostickman.jpg",
+      "thumbURL":"thumb-gostickman.jpg",
+      "technologies": ["Flash", "Photoshop", "After Effects", "Adobe Audition",  "WordPress"],
+      "tools": [],
+      "description":"GoStickman creates animated explainer videos for online advertising and corporate presentations. I am the co-founder and lead producer of all videos, as well as the creator of the website and marketing material."
+    },
+    {
+      "id":"sigma-1",
+      "name":"Sigma-1 Environments",
+      "imageURL":"assets/img/project-.jpg",
+      "thumbURL":"assets/img/thumb-.jpg",
+      "technologies": ["Javascript", "Foundation", "Angular", "Sass/CSS", "Gulp", "Bower"],
+      "tools": [],
+      "description":"Sigma-1 is a studio that designs and deploys lighting and visuals for stages, special events and installations. I build custom software solutions, I am the lead video artist, and I created the website."
+    },
+    {
+      "id":"multiverse",
+      "name":"Multiverse",
+      "imageURL":"project-multiverse.jpg",
+      "thumbURL":"thumb-multiverse.jpg",
+      "technologies": ["TouchDesigner", "Python"],
+      "tools": [],
+      "description":"Multiverse is an astronomy 3D mapping and performance visuals program I created with TouchDesigner software and Python scripts. The project was covered in a story in the Globe and Mail newspaper."
+    }
+  ]
+}

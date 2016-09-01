@@ -8,6 +8,12 @@
     <!-- load CSS -->
     <link rel="stylesheet" href="assets/css/app.css">
 
+    <!-- load fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <!-- load Angular.js -->
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular-route.min.js"></script>
@@ -19,28 +25,53 @@
 
     <div class="row">
   		<div class="large-12 columns">
-  			<div ui-view>Content here</div>
+
+          <div class="off-canvas-wrapper">
+            <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+
+              <div class="off-canvas position-left reveal-for-large sidebar" id="my-info" data-off-canvas data-position="left">
+                <div class="row column">
+                  <br>
+                  <img class="thumbnail" src="assets/img/profile-photo.jpg">
+                  <h3>Matt Mazur</h3>
+                  <p>I am a multi-faceted software developer and visual artist living in Vancouver, BC. I am currently searching for opportunities to use Javascript for creative Web and interface development.</p>
+                </div>
+              </div>
+
+              <div class="off-canvas-content main-area" data-off-canvas-content>
+                <div class="title-bar hide-for-large">
+                  <div class="title-bar-left">
+                    <button class="menu-icon" type="button" data-open="my-info"></button>
+                    <span class="title-bar-title">Matt Mazur</span>
+                  </div>
+                </div>
+                <div class="callout secondary top-title">
+                  <div class="row column top-title">
+                    <img style="margin-left:-10px;" src="assets/img/main-title-dark-1.png" />
+                    <p class="lead">The online portfolio of Matt Mazur.</p>
+                  </div>
+                </div>
+
+  			        <div ui-view></div>
+
+              </div>
+          </div>
+        </div>
       </div>
 	  </div>
 
     <footer class="row">
       <div class="large-12 columns">
-        <hr/>
         <div class="row">
           <div class="large-6 columns">
-            <p>Updated September 2016</p>
-          </div>
-          <div class="large-6 columns">
-            <ul class="inline-list right">
-              <li><a href="#/about">About</a></li>
-              <li><a href="#/notes">Notes</a></li>
-            </ul>
+          </br></br>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- load Javascript -->
+    <script src="lib/preloadjs/preloadjs-0.6.2.min.js"></script>
     <script src="assets/js/app.js"></script>
 
 	</body>

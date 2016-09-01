@@ -27,7 +27,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(jshint_verify, clean, javascript, gulp.parallel(pages, sass, images, copy, copyViews, copyHtmlRoot, copyLibraries), styleGuide));
+ gulp.series(jshint_verify, clean, javascript, gulp.parallel(pages, sass, images, copy, copyViews, copyHtmlRoot, copyLibraries, copyData), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -59,6 +59,11 @@ function copyHtmlRoot() {
 function copyLibraries() {
   return gulp.src(PATHS.libraries)
     .pipe(gulp.dest(PATHS.dist + '/lib'));
+}
+
+function copyData() {
+  return gulp.src("src/data/*.json")
+    .pipe(gulp.dest(PATHS.dist + '/data'));
 }
 
 // Copy page templates into finished HTML files
@@ -161,6 +166,7 @@ function watch() {
   gulp.watch('src/*.html').on('all', gulp.series(copyHtmlRoot, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, browser.reload));
+  gulp.watch('src/data/*.json').on('all', gulp.series(copyData, browser.reload));
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
