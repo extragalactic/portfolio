@@ -1,0 +1,47 @@
+
+.mybutton {
+    display: inline-block;
+    padding: 1em;
+    background-color: map-get($foundation-palette, primary);
+    text-decoration: none;
+    color: white;
+    border: 0px solid white;
+    border-radius: $global-radius;
+    &:hover {
+        color: rgb(144, 208, 236);
+    }
+    &:visited {
+        color: white;
+    }
+}
+.mybutton2 {
+    display: inline-block;
+    padding: 1em;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    border: 0px solid white;
+    border-radius: $global-radius;
+    &:hover {
+        color: black;
+        background-color: map-get($foundation-palette, success);
+    }
+    &:visited {
+        color: black;
+    }
+}
+
+.paddedButton {
+    margin: 7px;
+}
+
+@import "vendors/hover/options";
+@import "vendors/hover/mixins";
+@import "vendors/hover/hacks";
+
+@import "vendors/hover/effects/border-transitions/outline-out";
+@if $includeClasses {
+	.#{$nameSpace}-outline-out {
+		@include outline-out();
+	}
+}

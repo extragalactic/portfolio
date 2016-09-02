@@ -49,4 +49,7 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 'pages/main';
+@import 'base/base';
+@import 'base/buttons';
+@import 'pages/root';
+@import 'pages/projects';

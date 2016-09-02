@@ -1,4 +1,11 @@
-<div class="row">
+<div class="row colum">
+  <ul class="breadcrumbs breadcrumbFormat">
+    <li><a href="#">Projects</a></li>
+    <li>{{category}}</li>
+    <li>{{projectName}}</li>
+  </ul>
+</div>
+<div class="row" id="projectDetailsMain">
   <div class="medium-6 columns">
     <img class="thumbnail" src="{{imageURL}}">
     <div class="row column">
@@ -10,5 +17,8 @@
     <h4>Created with:
       <span ng-repeat="name in technologies">{{name}}{{$last ? '':', '}}</span>
     </h4>
+    <div id="websiteButton">
+      <a href="{{websiteURL}}" target="_blank" class="mybutton hvr-outline-out">Website</a>
+    </div>
   </div>
 </div>

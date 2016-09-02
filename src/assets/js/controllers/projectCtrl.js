@@ -17,6 +17,8 @@ angular.module('app').controller('ProjectCtrl', function($scope, $state, $stateP
       $scope.technologies = project.technologies;
       $scope.tools = project.tools;
       $scope.imageURL = "assets/img/projects/" + project.imageURL;
+      $scope.websiteURL = project.websiteURL;
+      $scope.category = project.category;
    }
 
    // return array element based on the value of the 'id' field

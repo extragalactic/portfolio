@@ -49,8 +49,8 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #fff,
+  primary: #2177af,
+  secondary: #51b5b2,
   success: #3adb76,
   warning: #ffae00,
   alert: #ec5840,
@@ -68,7 +68,7 @@ $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 10;
+$global-radius: 10px;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -262,7 +262,7 @@ $buttongroup-expand-max: 6;
 
 $callout-background: $white;
 $callout-background-fade: 0%;
-$callout-border: 1px solid rgba($black, 0.25);
+$callout-border: 1px solid rgba($black, 0);
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;

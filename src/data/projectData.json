@@ -3,26 +3,32 @@
     {
       "id":"galaxylist",
       "name":"Galaxy Browser",
+      "category":"Javascript",
       "imageURL":"project-galaxy-browser.jpg",
       "thumbURL":"thumb-galaxy-browser.jpg",
+      "websiteURL":"http://52.10.148.188:3300",
       "technologies": ["Javascript", "NodeJS", "MongoDB", "Angular", "Bootstrap", "Sass/CSS", "Gulp", "Amazon EC2"],
       "tools": [],
-      "description":"This website is an astronomy database of nearby galaxies, created as a complimentary component of my larger Multiverse project. The site runs MongoDB on an Amazon EC2 server."
+      "description":"This website is an interface to an astronomy database of nearby galaxies, using a MongoDB database running on an Amazon EC2 server."
     },
     {
       "id":"vjcontroller",
       "name":"iPad Controller",
+      "category":"Javascript",
       "imageURL":"project-vjcontroller.jpg",
       "thumbURL":"thumb-vjcontroller.jpg",
+      "websiteURL":"http://52.10.148.188:3400",
       "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "jQuery", "Sass/CSS", "Gulp", "NexusUI"],
       "tools": [],
-      "description":"This is a touch-screen controller for use on an iPad, using the NexusUI Javascript library and the OSC protocol. It features a step sequencer and adjustable presets to communicate with visual performance software."
+      "description":"This is a touch-screen controller for use on an iPad, using the NexusUI Javascript library. It features a step sequencer and adjustable presets to communicate with visual performance software via OSC."
     },
     {
       "id":"sketcher",
       "name":"Sketcher",
+      "category":"Javascript",
       "imageURL":"assets/img/project-.jpg",
       "thumbURL":"assets/img/thumb-.jpg",
+      "websiteURL":"",
       "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "HTML5 Canvas", "Gulp"],
       "tools": [],
       "description":"This is a multi-user sketch program that was developed as a prototype for a local graffiti art festival. It uses NodeJS and the HTML5 Canvas object to let multiple users draw on the screen."
@@ -30,38 +36,46 @@
     {
       "id":"portfolio",
       "name":"Online Portfolio",
+      "category":"Javascript",
       "imageURL":"assets/img/project-.jpg",
       "thumbURL":"assets/img/thumb-.jpg",
+      "websiteURL":"",
       "technologies": ["Javascript", "Foundation", "Angular", "Sass/CSS", "Gulp", "Bower"],
       "tools": [],
-      "description":"This website uses the Foundation framework and local JSON objects to store data."
+      "description":"This portfolio website uses the Foundation framework and AngularJS, along with local JSON objects to store data."
     },
     {
       "id":"gostickman",
       "name":"GoStickman Studios",
+      "category":"Animation",
       "imageURL":"project-gostickman.jpg",
       "thumbURL":"thumb-gostickman.jpg",
+      "websiteURL":"http://www.gostickman.com",
       "technologies": ["Flash", "Photoshop", "After Effects", "Adobe Audition",  "WordPress"],
       "tools": [],
-      "description":"GoStickman creates animated explainer videos for online advertising and corporate presentations. I am the co-founder and lead producer of all videos, as well as the creator of the website and marketing material."
+      "description":"GoStickman creates animated explainer videos for online advertising and corporate presentations. I am the co-founder and lead producer/animator of all videos, as well as the creator of the website and marketing material."
     },
     {
       "id":"sigma-1",
       "name":"Sigma-1 Environments",
-      "imageURL":"assets/img/project-.jpg",
-      "thumbURL":"assets/img/thumb-.jpg",
-      "technologies": ["Javascript", "Foundation", "Angular", "Sass/CSS", "Gulp", "Bower"],
+      "category":"Visual Art",
+      "imageURL":"project-sigma1.jpg",
+      "thumbURL":"thumb-sigma1.jpg",
+      "websiteURL":"http://www.sigma-1.com",
+      "technologies": ["TouchDesigner", "After Effects", "Photoshop", "Resolume", "Javascript"],
       "tools": [],
-      "description":"Sigma-1 is a studio that designs and deploys lighting and visuals for stages, special events and installations. I build custom software solutions, I am the lead video artist, and I created the website."
+      "description":"Sigma-1 is a studio that designs and deploys lighting and visuals for stages, special events and installations. I build lighting and video control software with TouchDesigner, and I perform as a video/visual artist."
     },
     {
       "id":"multiverse",
       "name":"Multiverse",
+      "category":"Programming",      
       "imageURL":"project-multiverse.jpg",
       "thumbURL":"thumb-multiverse.jpg",
+      "websiteURL":"http://www.galaxyclass.org/multiverse/",
       "technologies": ["TouchDesigner", "Python"],
       "tools": [],
-      "description":"Multiverse is an astronomy 3D mapping and performance visuals program I created with TouchDesigner software and Python scripts. The project was covered in a story in the Globe and Mail newspaper."
+      "description":"Multiverse is an astronomy 3D mapping and performance visuals program I created with TouchDesigner software (which uses Python). The project was covered in an August 2014 story in the Globe and Mail newspaper."
     }
   ]
 }
