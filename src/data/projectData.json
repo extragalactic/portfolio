@@ -26,8 +26,8 @@
       "id":"sketcher",
       "name":"Sketcher",
       "category":"Javascript",
-      "imageURL":"assets/img/project-.jpg",
-      "thumbURL":"assets/img/thumb-.jpg",
+      "imageURL":"project-sketcher.jpg",
+      "thumbURL":"thumb-sketcher.jpg",
       "websiteURL":"",
       "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "HTML5 Canvas", "Gulp"],
       "tools": [],
@@ -37,8 +37,8 @@
       "id":"portfolio",
       "name":"Online Portfolio",
       "category":"Javascript",
-      "imageURL":"assets/img/project-.jpg",
-      "thumbURL":"assets/img/thumb-.jpg",
+      "imageURL":"project-portfolio.jpg",
+      "thumbURL":"thumb-portfolio.jpg",
       "websiteURL":"",
       "technologies": ["Javascript", "Foundation", "Angular", "Sass/CSS", "Gulp", "Bower"],
       "tools": [],
@@ -69,13 +69,13 @@
     {
       "id":"multiverse",
       "name":"Multiverse",
-      "category":"Programming",      
+      "category":"Programming",
       "imageURL":"project-multiverse.jpg",
       "thumbURL":"thumb-multiverse.jpg",
       "websiteURL":"http://www.galaxyclass.org/multiverse/",
       "technologies": ["TouchDesigner", "Python"],
       "tools": [],
-      "description":"Multiverse is an astronomy 3D mapping and performance visuals program I created with TouchDesigner software (which uses Python). The project was covered in an August 2014 story in the Globe and Mail newspaper."
+      "description":"Multiverse is a galactic astronomy map and creative visualization program I created with TouchDesigner software and Python scripts. The project was covered in an August 2014 story in the Globe and Mail newspaper."
     }
   ]
 }

@@ -27,12 +27,12 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(jshint_verify, clean, javascript, gulp.parallel(pages, sass, images, copy, copyViews, copyHtmlRoot, copyLibraries, copyData), styleGuide));
+ gulp.series(jshint_verify, clean, javascript, gulp.parallel(pages, sass, images, copyViews, copyHtmlRoot, copyLibraries, copyData), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
-
+ 
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
@@ -40,10 +40,9 @@ function clean(done) {
 }
 
 // Copy files out of the assets folder
-// This task skips over the "img", "js", and "scss" folders, which are parsed separately
-function copy() {
-  return gulp.src(PATHS.assets)
-    .pipe(gulp.dest(PATHS.dist + '/assets'));
+function copyImages() {
+  return gulp.src(PATHS.assets + '/img/*.*')
+    .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
 function copyViews() {
@@ -64,6 +63,11 @@ function copyLibraries() {
 function copyData() {
   return gulp.src("src/data/*.json")
     .pipe(gulp.dest(PATHS.dist + '/data'));
+}
+
+function copyDownloads() {
+  return gulp.src("src/downloads/*.*")
+    .pipe(gulp.dest(PATHS.dist + '/downloads'));
 }
 
 // Copy page templates into finished HTML files
@@ -136,12 +140,8 @@ function javascript() {
 }
 
 // Copy images to the "dist" folder
-// In production, the images are compressed
 function images() {
-  return gulp.src('src/assets/img/**/*')
-    .pipe($.if(PRODUCTION, $.imagemin({
-      progressive: true
-    })))
+  return gulp.src('src/assets/img/**/*.*')
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
 
@@ -161,13 +161,13 @@ function reload(done) {
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
-  gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/views/*.html').on('all', gulp.series(copyViews, browser.reload));
+  //gulp.watch('src/assets/img/**/*.*').on('all', gulp.series(copyImages, browser.reload));  gulp.watch('src/views/*.html').on('all', gulp.series(copyViews, browser.reload));
   gulp.watch('src/*.html').on('all', gulp.series(copyHtmlRoot, browser.reload));
+  gulp.watch('src/downloads/*.*').on('all', gulp.series(copyDownloads));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, browser.reload));
   gulp.watch('src/data/*.json').on('all', gulp.series(copyData, browser.reload));
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
-  gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
+  gulp.watch('src/assets/img/**/*.*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
 }

@@ -51,5 +51,8 @@
     ]
   },
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.14.0",
+    "http": "0.0.0"
+  }
 }
