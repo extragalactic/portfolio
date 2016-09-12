@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import rename   from 'gulp-rename';
 import jshint   from 'gulp-jshint';
 
 // Load all Gulp plugins into one variable
@@ -27,7 +28,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(jshint_verify, clean, javascript, gulp.parallel(pages, sass, images, copyViews, copyHtmlRoot, copyLibraries, copyData), styleGuide));
+ gulp.series(jshint_verify, clean, javascript, gulp.parallel(sass, images, copyViews, copyHtmlRoot, copyServerConfig, copyLibraries, copyData), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -70,24 +71,38 @@ function copyDownloads() {
     .pipe(gulp.dest(PATHS.dist + '/downloads'));
 }
 
+function copyServerConfig(done) {
+  if(PRODUCTION) {
+    return gulp.src("src/serverIP - production.js")
+        .pipe(rename('serverIP.js'))
+        .pipe(gulp.dest('./dist'));
+  } else {
+    return gulp.src("src/serverIP - local.js")
+        .pipe(rename('serverIP.js'))
+        .pipe(gulp.dest('./dist'));
+  }
+};
+
 // Copy page templates into finished HTML files
-function pages() {
-  return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
-    .pipe(panini({
-      root: 'src/pages/',
-      layouts: 'src/layouts/',
-      partials: 'src/partials/',
-      data: 'src/data/',
-      helpers: 'src/helpers/'
-    }))
-    .pipe(gulp.dest(PATHS.dist));
-}
+
+//function pages() {
+//  return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
+//    .pipe(panini({
+//      root: 'src/pages/',
+//      layouts: 'src/layouts/',
+//      partials: 'src/partials/',
+//      data: 'src/data/',
+//      helpers: 'src/helpers/'
+//    }))
+//    .pipe(gulp.dest(PATHS.dist));
+//}
+
 
 // Load updated HTML templates and partials into Panini
-function resetPages(done) {
-  panini.refresh();
-  done();
-}
+//function resetPages(done) {
+//  panini.refresh();
+//  done();
+//}
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
@@ -164,7 +179,8 @@ function watch() {
   //gulp.watch('src/assets/img/**/*.*').on('all', gulp.series(copyImages, browser.reload));  gulp.watch('src/views/*.html').on('all', gulp.series(copyViews, browser.reload));
   gulp.watch('src/*.html').on('all', gulp.series(copyHtmlRoot, browser.reload));
   gulp.watch('src/downloads/*.*').on('all', gulp.series(copyDownloads));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch('src/views/*.html').on('all', gulp.series(copyViews, browser.reload));  
+  //gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, browser.reload));
   gulp.watch('src/data/*.json').on('all', gulp.series(copyData, browser.reload));
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));

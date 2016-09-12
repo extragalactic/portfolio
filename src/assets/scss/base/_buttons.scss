@@ -1,6 +1,7 @@
 
 .mybutton {
     display: inline-block;
+    overflow-y: hidden; 
     padding: 1em;
     background-color: map-get($foundation-palette, primary);
     text-decoration: none;
@@ -14,8 +15,9 @@
         color: white;
     }
 }
-.mybutton2 {
+.mybutton-white {
     display: inline-block;
+    overflow-y: hidden;    
     padding: 1em;
     background-color: white;
     text-decoration: none;
@@ -32,7 +34,8 @@
 }
 
 .paddedButton {
-    margin: 7px;
+    margin-left: 7px;
+    margin-right: 7px;
 }
 
 @import "vendors/hover/options";

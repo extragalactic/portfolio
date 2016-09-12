@@ -1,7 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 body {
     background: white;
     color: black;
+    -webkit-overflow-scrolling: touch;    
 }
 p {
   font-family: 'Istok Web', sans-serif;
@@ -25,6 +31,7 @@ h4 {
   border: 1px solid black;
   border-radius: $global-radius;
   box-shadow: 3px 3px 3px $dark-gray;
+  padding: 5px;
 }
 
 .profileImage {
@@ -42,3 +49,31 @@ h4 {
 .main-area {
     padding-left: 15px;
 }
+
+.mainSubTitle {
+  padding-left: 7px;  
+}
+
+.contentText {
+  overflow-y: hidden;
+}
+
+.insetContent {
+    padding-left: 15px; 
+    padding-right: 15px; 
+}
+
+@media #{$small-only} {
+  .columns {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+  .main-area {
+      padding-left: 0;
+      padding-right: 0;
+  }
+
+
+}
+

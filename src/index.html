@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+   
     <title></title>
 
     <!-- load CSS -->
@@ -34,25 +37,25 @@
                   <br>
                   <img class="profileImage" src="assets/img/profile-photo.jpg">
                   <h3>Matt Mazur</h3>
-                  <p>I am a multi-faceted software developer and visual artist living in Vancouver, BC. I am currently searching for opportunities to use Javascript for creative Web and interface development.</p>
+                  <p class="contentText">I am a multi-faceted software developer and visual artist living in Vancouver, BC. I am currently searching for opportunities to use Javascript for creative website and interface development.</p>
                 </div>
               </div>
 
               <div class="off-canvas-content main-area" data-off-canvas-content>
                 <div class="title-bar hide-for-large">
                   <div class="title-bar-left">
-                    <button class="menu-icon" type="button" data-open="my-info"></button>
-                    <span class="title-bar-title">Matt Mazur</span>
+                    <button type="button" class="userIcon"><a href="./index.html"><img src="assets/img/user-icon-white.png" /></a></button>
+                    <a href="./index.html"><span class="title-bar-title">Matt Mazur</span></a>
                   </div>
                 </div>
                 <div id="top-title">
                   <div class="row column">
                     <img src="assets/img/main-title-dark-1.png" />
-                    <p class="lead">The online portfolio of Matt Mazur.</p>
+                    <p class="lead mainSubTitle">The online portfolio of Matt Mazur.</p>
                   </div>
                 </div>
 
-  			        <div ui-view></div>
+  			        <div ui-view  class="insetContent"></div>
 
               </div>
           </div>

@@ -1,9 +1,18 @@
 
 #projectDetailsMain {
-    min-height: 340px;
+    min-height: 330px;
     height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+
+	.projectMainImage {
+		margin-bottom: 15px;
+	}
+
+	#websiteButton {
+	    margin-top: 15px;
+	}	
 }
 
-#websiteButton {
-    margin-top: 15px;
-}
+
+

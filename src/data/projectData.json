@@ -6,7 +6,7 @@
       "category":"Javascript",
       "imageURL":"project-galaxy-browser.jpg",
       "thumbURL":"thumb-galaxy-browser.jpg",
-      "websiteURL":"http://52.10.148.188:3300",
+      "websiteURL":"http://www.galacticnavigator.com/multiverse",
       "technologies": ["Javascript", "NodeJS", "MongoDB", "Angular", "Bootstrap", "Sass/CSS", "Gulp", "Amazon EC2"],
       "tools": [],
       "description":"This website is an interface to an astronomy database of nearby galaxies, using a MongoDB database running on an Amazon EC2 server."
@@ -17,21 +17,21 @@
       "category":"Javascript",
       "imageURL":"project-vjcontroller.jpg",
       "thumbURL":"thumb-vjcontroller.jpg",
-      "websiteURL":"http://52.10.148.188:3400",
+      "websiteURL":"http://www.galacticnavigator.com/controller",
       "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "jQuery", "Sass/CSS", "Gulp", "NexusUI"],
       "tools": [],
       "description":"This is a touch-screen controller for use on an iPad, using the NexusUI Javascript library. It features a step sequencer and adjustable presets to communicate with visual performance software via OSC."
     },
     {
       "id":"sketcher",
-      "name":"Sketcher",
+      "name":"Sketch Pad",
       "category":"Javascript",
       "imageURL":"project-sketcher.jpg",
       "thumbURL":"thumb-sketcher.jpg",
-      "websiteURL":"",
+      "websiteURL":"http://www.galacticnavigator.com/sketchpad",
       "technologies": ["Javascript", "NodeJS", "Angular", "Bootstrap", "HTML5 Canvas", "Gulp"],
       "tools": [],
-      "description":"This is a multi-user sketch program that was developed as a prototype for a local graffiti art festival. It uses NodeJS and the HTML5 Canvas object to let multiple users draw on the screen."
+      "description":"This is a multi-user sketch pad program that was developed as a prototype for a local graffiti art festival. It uses NodeJS and the HTML5 Canvas object to let multiple users draw on the screen."
     },
     {
       "id":"portfolio",
@@ -39,7 +39,7 @@
       "category":"Javascript",
       "imageURL":"project-portfolio.jpg",
       "thumbURL":"thumb-portfolio.jpg",
-      "websiteURL":"",
+      "websiteURL":"http://www.galacticnavigator.com",
       "technologies": ["Javascript", "Foundation", "Angular", "Sass/CSS", "Gulp", "Bower"],
       "tools": [],
       "description":"This portfolio website uses the Foundation framework and AngularJS, along with local JSON objects to store data."
