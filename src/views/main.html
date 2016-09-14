@@ -48,15 +48,19 @@
   </div>
 </div>
 
-<hr>
+<hr class="style-four">
 
 <div class="row contact-section">
   <div class="small-12 medium-10 columns">
-    <div style="margin: auto;"> 
-    <div style="margin-left: 10px;">
+    <div id="mainContactContainer"> 
+    <div id="innerContactContainer">
 
         <h3>Contact Me</h3>
-        <p class="contentText">Send me a message if you'd like to further discuss my qualifications and work experience. I am searching for part-time projects or full-time employment.</p>
+
+        <img class="miniProfileImage show-for-medium-only" src={{bioPhoto}}>           
+        <p class="contentText hide-for-large hide-for-xlarge">{{bioText}}</p>
+
+        <p class="contentText newline">Send me a message if you'd like to further discuss my qualifications and work experience. I am searching for part-time projects or full-time employment.</p>
 
         <p class="contentText">Email: <a href="mailto:matt@sigma-1.com">matt@sigma-1.com</a><p>
       <ul class="menu">
@@ -64,8 +68,9 @@
         <li><a href="https://www.facebook.com/vj.elfmaster" target="_blank" class="mybutton paddedButton hvr-outline-out">Facebook</a></li>
         <li><a href="https://github.com/extragalactic" target="_blank" class="mybutton paddedButton hvr-outline-out">GitHub</a></li>
       </ul>
-
       </br>
+        
+      <img class="miniProfileImage show-for-small-only" src={{bioPhoto}}>
       <h6>Or download my resume:</h6>
       <a href="http://www.galacticnavigator.com/downloads/Resume - Matthew Mazur.pdf" target="_blank" class="mybutton-white paddedButton hvr-outline-out">Resume</a>
       </br></br>

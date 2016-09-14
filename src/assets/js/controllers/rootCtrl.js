@@ -13,4 +13,8 @@ angular.module('app').controller('RootCtrl', function($scope, $state, $document,
    });
    preload.loadFile("../../data/projectData.json");
 
-})
+   // set some content that will be used across several pages/controllers
+   $scope.bioText = "I am a multi-faceted software developer and visual artist living in Vancouver, BC. I am currently searching for opportunities to use Javascript for creative website and interface development.";
+   $scope.bioPhoto = "assets/img/profile-photo.jpg";
+
+});

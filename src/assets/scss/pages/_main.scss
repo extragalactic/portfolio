@@ -1,12 +1,26 @@
 
+#mainContactContainer {
+	margin: auto;
+}
+
+#innerContactContainer {
+	margin-left: 10px;
+
+	.newline {
+	  clear: both;
+	}
+}
+
 .thumbnailText {
     padding-left: 5px;
     padding-bottom: 5px;
     margin-top: -10px;
 }
+
 .thumbRowPadding {
     padding-right: 5px;
 }
+
 .thumbnail {
 	margin-top: 5px;
 }

@@ -21,7 +21,17 @@
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular-route.min.js"></script>
     <script src="lib/angular/angular-ui-router.min.js"></script>
-    <script src="lib/angular/angular-animate.min.js"></script>
+    <script src="lib/angular/angular-animate.min.js"></script> 
+
+
+   <!-- jQuery CDN -->
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>   
+    <!-- <script src="lib/jquery/jquery.min.js"></script> -->
+
+   <!-- Foundation CDN -->
+   <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script> 
+    
+
   </head>
 
   <body ng-app="app" ng-controller="RootCtrl">
@@ -35,9 +45,9 @@
               <div class="off-canvas position-left reveal-for-large sidebar" id="my-info" data-off-canvas data-position="left">
                 <div class="row column">
                   <br>
-                  <img class="profileImage" src="assets/img/profile-photo.jpg">
+                  <img class="profileImage" src={{bioPhoto}}>
                   <h3>Matt Mazur</h3>
-                  <p class="contentText">I am a multi-faceted software developer and visual artist living in Vancouver, BC. I am currently searching for opportunities to use Javascript for creative website and interface development.</p>
+                  <p class="contentText">{{bioText}}</p>
                 </div>
               </div>
 
@@ -77,5 +87,10 @@
     <script src="lib/preloadjs/preloadjs-0.6.2.min.js"></script>
     <script src="assets/js/app.js"></script>
 
+    <!-- initialize Foundation -->
+    <script>
+      $(document).foundation();
+    </script>
+    
 	</body>
 </html>
